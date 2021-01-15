@@ -38,6 +38,8 @@ public class Main {
                         System.out.println("There is a number here.");
                     }
                 } else if (command.equals("free")) {
+                    // number 7 handles the recursion calls to reveal the empty fields of the map
+                    // this number needs to be higher if the game field gets bigger. BUT: The bigger the slower the loading time
                     boolean free = map.setCell(col, row, 7, firstRound);
 
                     if (!free) {
