@@ -69,6 +69,7 @@ public class Map {
 
             map[row][col] = Marks.CLEAR.getMark();
 
+            // fill map with mines after first game move
             if (firstRound) {
                 fillMaps();
             }
@@ -76,6 +77,7 @@ public class Map {
             returnValuesFromAdjacentCells(row, col, iterator);
 
 
+            // this loop allows to reduce the recursion calls 
             for (int i = 0; i < this.sizeX; i++) {
                 for (int j = 0; j < this.sizeY; j++) {
                     if (displayMap[i][j] == Marks.CLEAR.getMark()) {
@@ -86,6 +88,7 @@ public class Map {
 
             return true;
 
+        // game over
         } else if (map[row][col] == Marks.MINE.getMark()) {
             return false;
         }
@@ -109,6 +112,12 @@ public class Map {
 
 
     public void returnValuesFromAdjacentCells(int row, int col, int iterator) {
+        // first: check if field is in a corner, on a side, or in the middle
+        // second: count all adjacing mines
+        // third: if the field is clear (= no mines adjacent) recall the method (recursion)
+        // forth: set value (clear or number of mines adjacent) to the cell
+        
+        // ASCII value for 0
         char mineCounter = 48;
 
         if (iterator > 0) {
@@ -404,6 +413,7 @@ public class Map {
             }
 
             if (mineCounter == 48) {
+                //ASCII value for /
                 mineCounter--;
             }
 
