@@ -19,7 +19,6 @@ public class Main {
         int rowCoordinate = 0;
         int columnCoordinate = 0;
 
-
         while(roundCounter < 10){
             System.out.print("Enter the coordinates: ");
             String secondInput = scanner.nextLine();
