@@ -6,7 +6,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-
     private static boolean exitCommand = false;
     private static boolean validExpression = true;
     private static Map<String, String> variables = new HashMap<>();
