@@ -6,7 +6,6 @@ import java.util.*;
 public class Main {
     public static Map<String, ArrayList<Integer>> invertedIndexes = new HashMap<>();
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<String> persons = new ArrayList<>();
