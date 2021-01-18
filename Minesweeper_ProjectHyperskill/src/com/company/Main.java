@@ -15,7 +15,6 @@ public class Main {
         map.fillMapsForFirstRound();
         map.printDisplayMap();
 
-
         while (true) {
             boolean validMove = false;
 
