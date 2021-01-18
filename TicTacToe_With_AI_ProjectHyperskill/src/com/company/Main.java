@@ -6,7 +6,6 @@ public class Main {
         UserInterface ui = new UserInterface();
         ui.start();
 
-        
         /* IMPORTANT
         Stage 5 tests for this project on Hyperskill are odd.
         It either says AI difficulty is to high or too low.
