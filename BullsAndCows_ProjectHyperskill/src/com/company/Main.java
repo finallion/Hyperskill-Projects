@@ -73,6 +73,7 @@ public class Main {
 
 
     public static String createCode(int lengthOfCode, int rangeOfCharacter) {
+        // List.of needs at least Java 9
         List<String> uniqueCharacters = new ArrayList<>(List.of("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"));
 
         List<String> selectedCharacters = uniqueCharacters.subList(0, rangeOfCharacter);
